@@ -1,6 +1,6 @@
 namespace Common.Application.Abstractions;
 
-public static class PeakerRoles
+public static class AscendaRoles
 {
     public const string ClaimType = "roles";
 

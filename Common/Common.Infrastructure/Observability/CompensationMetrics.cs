@@ -7,7 +7,7 @@ public sealed class CompensationMetrics
     private readonly Counter<long> failures;
 
     public CompensationMetrics() =>
-        failures = PeakerMetrics.Meter.CreateCounter<long>(
+        failures = AscendaMetrics.Meter.CreateCounter<long>(
             "peaker.compensation.failures", "{compensation}");
 
     public void RecordFailure(string assetKind) =>

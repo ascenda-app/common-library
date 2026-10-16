@@ -17,6 +17,6 @@ public static class AuthorizationExtensions
 
             options.AddPolicy(
                 AdminPolicyName,
-                policy => policy.RequireAuthenticatedUser().RequireClaim(PeakerRoles.ClaimType, PeakerRoles.Admin));
+                policy => policy.RequireAuthenticatedUser().RequireClaim(AscendaRoles.ClaimType, AscendaRoles.Admin));
         });
 }

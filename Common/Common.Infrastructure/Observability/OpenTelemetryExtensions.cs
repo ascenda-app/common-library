@@ -32,7 +32,7 @@ public static class OpenTelemetryExtensions
 
     private static void ConfigureMetrics(MeterProviderBuilder metrics, Uri? otlpEndpoint)
     {
-        metrics.AddAspNetCoreInstrumentation().AddHttpClientInstrumentation().AddMeter(PeakerMetrics.MeterName);
+        metrics.AddAspNetCoreInstrumentation().AddHttpClientInstrumentation().AddMeter(AscendaMetrics.MeterName);
 
         if (otlpEndpoint is not null)
         {

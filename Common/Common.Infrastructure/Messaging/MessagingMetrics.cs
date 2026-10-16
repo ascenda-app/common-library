@@ -8,7 +8,7 @@ public sealed class MessagingMetrics
     private readonly Counter<long> deadLettered;
 
     public MessagingMetrics() =>
-        deadLettered = PeakerMetrics.Meter.CreateCounter<long>(
+        deadLettered = AscendaMetrics.Meter.CreateCounter<long>(
             "peaker.messaging.dead_lettered", "{message}");
 
     public void RecordDeadLettered(string queue, string errorType) =>
