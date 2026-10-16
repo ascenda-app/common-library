@@ -15,16 +15,16 @@ public sealed class OutboxMetrics
     public OutboxMetrics()
     {
         published = AscendaMetrics.Meter.CreateCounter<long>(
-            "peaker.outbox.messages.published", MessagesUnit);
+            "ascenda.outbox.messages.published", MessagesUnit);
         failed = AscendaMetrics.Meter.CreateCounter<long>(
-            "peaker.outbox.messages.failed", MessagesUnit);
+            "ascenda.outbox.messages.failed", MessagesUnit);
 
         AscendaMetrics.Meter.CreateObservableGauge(
-            "peaker.outbox.pending.count", () => backlog.PendingCount, MessagesUnit);
+            "ascenda.outbox.pending.count", () => backlog.PendingCount, MessagesUnit);
         AscendaMetrics.Meter.CreateObservableGauge(
-            "peaker.outbox.parked.count", () => backlog.ParkedCount, MessagesUnit);
+            "ascenda.outbox.parked.count", () => backlog.ParkedCount, MessagesUnit);
         AscendaMetrics.Meter.CreateObservableGauge(
-            "peaker.outbox.pending.oldest_age", () => backlog.OldestPendingAge.TotalSeconds, "s");
+            "ascenda.outbox.pending.oldest_age", () => backlog.OldestPendingAge.TotalSeconds, "s");
     }
 
     public OutboxBacklog Backlog => backlog;

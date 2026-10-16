@@ -8,7 +8,7 @@ public sealed class CompensationMetrics
 
     public CompensationMetrics() =>
         failures = AscendaMetrics.Meter.CreateCounter<long>(
-            "peaker.compensation.failures", "{compensation}");
+            "ascenda.compensation.failures", "{compensation}");
 
     public void RecordFailure(string assetKind) =>
         failures.Add(1, new KeyValuePair<string, object?>("asset.kind", assetKind));

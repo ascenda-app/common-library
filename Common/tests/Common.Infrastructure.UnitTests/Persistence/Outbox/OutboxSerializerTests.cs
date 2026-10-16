@@ -24,7 +24,7 @@ public sealed class OutboxSerializerTests
         OutboxMessage message = new()
         {
             Id = Guid.CreateVersion7(),
-            Type = "Peaker.Unknown.Event, Peaker.Unknown",
+            Type = "Ascenda.Unknown.Event, Ascenda.Unknown",
             Content = "{}",
             OccurredAtUtc = DateTime.UtcNow
         };
