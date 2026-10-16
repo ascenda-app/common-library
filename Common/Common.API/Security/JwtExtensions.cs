@@ -68,7 +68,7 @@ public static class JwtExtensions
             ValidateIssuerSigningKey = true,
             ValidateWithLKG = true,
             NameClaimType = "sub",
-            RoleClaimType = PeakerRoles.ClaimType,
+            RoleClaimType = AscendaRoles.ClaimType,
             ClockSkew = TimeSpan.FromSeconds(30)
         };
 }

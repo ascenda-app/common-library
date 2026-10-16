@@ -13,7 +13,7 @@ public sealed class UserContext(IHttpContextAccessor httpContextAccessor) : IUse
 
     public bool IsInRole(string role) =>
         httpContextAccessor.HttpContext?.User
-            .FindAll(PeakerRoles.ClaimType)
+            .FindAll(AscendaRoles.ClaimType)
             .Any(claim => string.Equals(claim.Value, role, StringComparison.Ordinal)) ?? false;
 
     private Guid GetUserId()
